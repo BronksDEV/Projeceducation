@@ -1,0 +1,326 @@
+/* Definindo a fonte padrão para todo o documento */
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Definindo as cores padrão */
+  :root {
+    --cor-primaria: #01111f;
+    --cor-secundaria: #FFFFFF;
+    --cor-texto: #333333;
+    --cor-botao: #ff0808;
+    --cor-destaque: #f00;
+  }
+  
+  /* Definindo o estilo do header */
+  header {
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Definindo o estilo do logo */
+  header h1 a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  
+  /* Definindo o estilo do menu superior */
+  .nav-top ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-top li {
+    margin-right: 1em;
+  }
+  
+  .nav-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+  }
+  
+  .nav-top a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+  }
+  
+  /* Definindo o estilo da barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centralizando a foto de perfil */
+  }
+  
+  /* Definindo o estilo da foto de perfil */
+  .foto-perfil {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Adicionando uma margem inferior */
+  }
+  .foto-perfil:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+  
+  /* Definindo o estilo dos botões na barra lateral */
+  .sidebar a {
+    display: block;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 0.5em 1em;
+    border-radius: 25px; /* Modificado para bordas arredondadas */
+    border: 2pxsolid var(--cor-primaria); /* Adicionado uma borda */
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .sidebar a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria); /* Mudando a cor da borda ao passar o mouse */
+  }
+  
+  /* Definindo o estilo do botão de logout na barra lateral */
+  .logout-button {
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria);
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+  
+  .logout-button:hover {
+    background-color: #E64A19;
+  }
+    
+    /* Definindo o estilo do conteúdo principal */
+    .container {
+      display: flex;
+      flex-grow: 1;
+    }
+    
+    .main-conteudo {
+    padding: 20px;
+    
+    }
+    
+    /* Definindo o estilo dos espaços de trabalho e atestado */
+    .espaco-trabalhos,
+    .espaco-atestado,
+    .espaco-historico {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    
+    .espaco-trabalhos h2,
+    .espaco-atestado h2,
+    .espaco-historico h2 {
+      text-align: center;
+    }
+    
+    .espaco-trabalhos a,
+    .espaco-atestado a,
+    .espaco-historico a {
+      display: inline-block;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+/* Definindo o estilo do botão dos espaços de trabalho */
+.btn-enviar,
+.btn-atestado,
+.btn-historico {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center; /* Centralizando o texto */
+}
+
+/* Centralizando o texto dos títulos */
+.espaco-trabalhos h2,
+.espaco-atestado h2,
+.espaco-historico h2 {
+  text-align: center;
+}
+    
+    /* Definindo o estilo dos formulários de enviar atividade, atestado e histórico */
+    .form-enviar-atividade,
+    .form-atestado,
+    .form-historico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    .form-enviar-atividade label,
+    .form-atestado label,
+    .form-historico label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    
+    .form-enviar-atividade input,
+    .form-atestado input,
+    .form-historico input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 5px;
+    }
+    
+    .form-atestado input[type="file"] {
+    margin-bottom: 0;
+    }
+    
+    .form-enviar-atividade button[type="submit"],
+    .form-atestado button[type="submit"],
+    .form-historico button[type="submit"] {
+    background-color: var(--cor-botao);
+    color: var(--cor-secundaria);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    }
+    
+    .form-enviar-atividade button[type="submit"]:hover,
+    .form-atestado button[type="submit"]:hover,
+    .form-historico button[type="submit"]:hover {
+    background-color: #E64A19;
+    }
+    
+    /* Definindo o estilo da resposta visual dos botões */
+    button:hover {
+    opacity: 0.8;
+    }
+    
+    /* Definindo o estilo do rodapé */
+    footer {
+      background-color: var(--cor-primaria);
+      color: var(--cor-secundaria);
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .social-icons a i {
+      color: white;
+      font-size: 1.5em;
+    }
+    
+    .social-icons a i:hover {
+      color: var(--cor-destaque);
+    }
+
+      /* Estilo dos botões fechar do foorm*/
+   
+    .btn-fechar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    
+    /* Adicionando regras de mídia para telas menores */
+    @media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    align-items: center;
+    }
+    .nav-top {
+    margin-top: 20px;
+    }
+    .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: none;
+    }
+    .main-conteudo {
+    margin-left: 0;
+    }
+    .foto-perfil {
+    max-width: 100px;
+    }
+    .nav-top a {
+    font-size: 0.8em;
+    padding: 0.5em;
+    border-radius: 10px;
+    }
+    .sidebar a {
+    font-size: 0.8em;
+    padding: 0.5em;
+    border-radius: 10px;
+    }
+    .btn-enviar,
+    .btn-atestado,
+    .btn-historico,
+    .btn-fechar {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    }
+    }
+  
+
+    input[type="text"] {
+      text-transform: uppercase;
+    }
+    
+    input[type="text"]:focus {
+      text-transform: none;
+    }
